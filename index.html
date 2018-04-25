@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <title>Article title c JSX</title>
+
+    <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+       const ArticleTitle = React.createClass ({
+        render () {
+          const {
+            artitle,
+            author,
+            text,
+            likes,
+            comments
+          } = this.props;
+
+          // Игорь ПРИВЕТ!!!!!!!!!!
+
+          //One more "Hello" for Igor as a testing GIT !!
+
+          return (
+            <div id="BLOCK">
+            <h1>{artitle}</h1>
+            <p>{author}</p>
+            <p>{text } </p>
+
+            <div className="ArticleStats">
+            <i className="fa fa-heart" />
+            {likes}
+
+            <i className="fa fa-comments-o" />
+            {comments}
+            </div>
+
+
+
+            </div>
+          );
+        }
+
+      });
+      ReactDOM.render (
+        <ArticleTitle artitle="Article title"
+        author="by John Snow"
+        text= "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+        likes={500}
+        comments={300}
+
+        />,
+        document.getElementById('root')
+      )
+    </script>
+</body>
+</html>
